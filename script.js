@@ -1,4 +1,3 @@
-document.querySelector('header').textContent = `${new Date().toUTCString()}`.slice(0,16);
 document.querySelector('footer > span').textContent = `Copyright © ${new Date().getFullYear()} `;
 const map = new Map();
 const dictionary = document.querySelector('ul');
@@ -35,6 +34,7 @@ const flag = () => {
 
 const notepad = document.querySelector('ol');
 const button = document.querySelector('#button');
+const clear = document.querySelector('#clear');
 
 for (let i = 0; i < 10; ++i) {
     let line = document.createElement('li');
@@ -66,6 +66,13 @@ button.addEventListener('click', () => {
     }
 });
 
+clear.addEventListener('click', () => {
+    Array.from(document.querySelectorAll('main>ol>li>input')).forEach(element=>{
+        element.value='';
+        element.style.backgroundColor='transparent';
+        button.disabled = false;
+    })
+})
 
 for(let i=0;  i<localStorage.length; ++i){
     let listItem = document.createElement('li');

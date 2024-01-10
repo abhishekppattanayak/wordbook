@@ -3,16 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>📒 Learn new words daily!</title>
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js" defer></script>
+    <script src="./time.js" defer></script>
 </head>
 <body>
     <header></header>
     <main>
         <span>Enter your words here!</span>
         <ol></ol>
-        <button id="button">Add to wordbook</button>
+        <div>
+            <button id="button">Add to wordbook</button>
+            <button id="clear">Clear notepad</button>
+        </div>
     </main>
     <aside>
         <div>Known words</div>
@@ -25,5 +29,11 @@
         </ol>
     </aside>
     <footer><span></span><a href="https://github.com/malginisus" target="_blank" referrerpolicy="noreferrer">malginisus</a></footer>
+    <div>
+        <div><p> This area is called <span style="color:blue">the notepad</span>.</p> <p>Enter the words here. If the word has been already added to the wordbook (top-left section), then it will be highlighted with <span style="color: lightcoral;">red.</span> </p> <p> ⚠️ If the word entered does not exist in the English dictionary, then it would be skipped while adding to the wordbook.</p></div>
+        <div><p>This area is <span style="color: purple;">the wordbook</span>.</p> <p> All the words learnt are added here. </p><p>Click on a word to get it's definition(s) below. </p></div>
+        <div>This is the definition area. It has no proper name. <br> Click 'OK' to enter the application.</div>
+        <div><button onclick="document.querySelector('body>div:nth-child(n)').style.display='none'">OK</button></div>
+    </div>
 </body>
 </html>
